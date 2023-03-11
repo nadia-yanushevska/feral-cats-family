@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*   
+    Feral Cats Family - Styles for About Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_styles7.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* Article Styles */
+body > article {
+    display: block;
+    margin: 1.5em auto;
+    width: 75%;
+    background-color: hsla(50, 100%, 90%, 0.5);
+    background: radial-gradient(hsla(50, 100%, 90%, 0.3), hsla(50, 100%, 90%, 0.5), hsla(50, 100%, 90%, 0.9));
+    border-radius: 60px; 
+}
+
+article#main {
+    margin-top: 0;
+    padding: 1% 5% 3%;    
+    background-color: hsla(70, 90%, 95%, 0.5);
+    background: radial-gradient(hsla(70, 90%, 95%, 0.3), hsla(70, 90%, 95%, 0.5), hsla(70, 90%, 95%, 0.9));
+}
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+@media only screen and (max-width: 480px) {
+    /* Article Styles */
+    body > article {
+        display: none;
+    }
+    
+    body > article#main {
+        display: block;
+        width: 95%;
+    }
+}
+
+/* ================================
+   Tablet Styles: 481px to 768px
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+    /* Article Styles */
+    body > article {
+        display: block;
+        width: 95%;
+    }
+}

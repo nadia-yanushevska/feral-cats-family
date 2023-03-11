@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+/*   
+    Feral Cats Family - Baseline Style Sheet for Feral Cats Family
+    Author: Nadiia Yanuchevska
+
+    Filename: reset.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* Main Styles*/
+html {
+    background: white;
+}
+
+body {
+    font-size: 1.5em;
+    line-height: 1.8em;
+}
+
+article, aside, footer, header, nav, section { 
+   display: block;
+}
+
+article, aside, body, dl, dt, dd, footer, h1, h2, h3, h4, header, html, img, 
+li, nav, nav a, p, ol, ul {
+   -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+   box-sizing: border-box; 
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   vertical-align: baseline;
+   background: transparent; 
+}
+
+/* List Styles */
+dl, ol, ul {
+   list-style: none;
+}
+
+/* Navigational Styles */
+#navicon {
+    display: none;
+}
+
+nav ul {
+   list-style: none;
+   list-style-image: none;
+}
+
+nav a {
+   display: block;
+}
+
+a {
+   text-decoration: none;    
+}

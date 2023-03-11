@@ -1,0 +1,210 @@
+@charset "utf-8";
+
+/*   
+    Feral Cats Family - Styles for Home Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_styles1.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* Image Styles */
+img, a img {
+    display: block;
+    border: 1px solid rgb(141, 190, 0);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* First Section Styles */
+section#s1 {
+    display: block;
+    font-size: larger;
+}
+
+section#s1 > p {
+    max-width: 810px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section#s1 > p:first-of-type {
+    margin-top: -30px;
+}
+
+section#s1 > a img {
+    margin: 8px 2px 10px;
+    max-height: 440px;
+    min-height: 300px;
+    border-radius: 30px;
+}
+
+section#s1 > a img:active, section#s1 > a img:hover {
+    opacity: 0.8;
+}
+
+section#s1 > a img:active {
+    transform: translateY(4px);
+}
+
+/* Second Section Styles */
+section#s2 > article {
+    margin: 0.5rem;
+    box-sizing: border-box;
+    border: 1px double rgb(141, 190, 0);
+    border-radius: 30px;
+    background-color: rgb(235, 230, 150);
+}
+
+section#s2 > article > img {
+    display: block;
+    width: 90%;
+    margin: 0.5em auto 1em;
+}
+
+/* Third Section Styles */
+section#s3 {
+    background: rgba(255, 220, 110, 0.6);
+    box-sizing: content-box;
+    margin: 10px 10%;
+    border-radius: 30px;
+}
+
+section#s3 > dl > div {
+    padding: 5px;
+    box-sizing: content-box;
+}
+
+section#s3 > dl > div > dd > ul {
+    list-style-type: circle;
+}
+/* Description List Styles */
+dt {
+    text-decoration: underline;
+    font-size: 1.2rem;
+}
+
+dd > ul {
+    margin-left: 1em;
+}
+
+/* Drop Cap Styles */
+section > p:first-of-type::first-letter {
+    color: grey;
+    font-size: 30px;
+    font-family: cursive;
+}
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+@media only screen and (max-width: 480px) {
+    /* First Section Styles */
+    #s1 > a img {
+        height: 230px;
+    }
+    
+    /* Second Section Styles */
+    section#s2 > article {
+        display: none;
+    }
+    
+    section#s2 > article#a1 {
+        display: block;
+    }
+    
+    /* Third Section Styles */
+    section#s3 {
+        display: none;
+    }    
+}
+
+/* ================================
+   Tablet Styles: 481px to 768px
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+    /* First Section Styles */
+    #s1 > a img {
+        min-height: 300px;
+    }
+    
+    /* Second Section Styles */
+    #s2 > article {
+        display: block;
+    }
+    
+    #s2 > article#a4 {
+        display: none;
+    }
+    
+    #s2 > article > img {
+        position: relative;
+        right: 5%;
+        float: right;
+    }
+    
+    #s2 > article::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+}
+
+/* ================================
+   Desktop Styles: 769px and greater
+   ================================
+*/
+@media only screen and (min-width: 769px) { 
+    /* First Section Styles */
+    #s1 > a img {
+        height: 480px;
+        float: left;
+    }
+    
+    /* Second Section Styles */
+    #s2 > article#a4 {
+        display: block;
+    }    
+    
+    #s3 > article > img {
+        position: static;
+        float: none;
+    }
+    /* Grid Styles */
+    section#s2 {
+        clear: both;
+        display: grid;
+        grid-template-columns: auto auto;
+    }
+    
+    h3 {
+        grid-column: 1 / span 2;
+        grid-row: 1;
+    }
+
+    #a1 {
+        grid-column: 1;
+        grid-row: 2;
+    }
+
+    #a2 {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    #a3 {
+        grid-column: 1;
+        grid-row: 3;
+    }
+
+    #a4 {
+        grid-column: 2;
+        grid-row: 3;
+    }
+}

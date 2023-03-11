@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/*   
+   Feral Cats Family - Styles for Help Us Help Them Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_styles6.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* Sematic Element Styles */
+aside {
+    box-sizing: border-box;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    border: 1px double hsl(160, 90%, 60%);
+    border-radius: 100px 100px 50px 50px;
+    background-color: hsla(160, 90%, 95%, 0.5);
+    max-width: 300px;
+    text-align: center;
+}
+
+article {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 2em;
+    width: 90%;
+    background-color: rgba(245, 240, 200, 0.6);
+    background: radial-gradient(hsla(50, 100%, 80%, 0.1), hsla(50, 100%, 80%, 0.3), hsla(50, 100%, 80%, 0.6), hsla(50, 100%, 80%, 0.8));
+    border-radius: 50px;
+}
+
+aside + article {
+    background-color: hsla(80, 100%, 70%, 0.5);
+    background: radial-gradient(hsla(80, 100%, 70%, 0.1), hsla(80, 100%, 70%, 0.3), hsla(80, 100%, 70%, 0.6)); 
+}
+
+article > ul {
+    text-align: center;
+}
+
+/* Heading Styles */
+h2:nth-of-type(2) {
+    position: relative;
+    top: -0.6em;
+}
+
+h4 {
+    text-align: center;
+    font-size: larger;
+    font-weight: normal;
+}

@@ -1,0 +1,66 @@
+@charset "utf-8";
+
+/*   
+   Flex Styles for navigational list of Feral Cats Family
+   Filename: fcf_flex.css
+
+   Feral Cats Family website:
+      HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                           fcf_history.html, index.html.
+      CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+      JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* ================================
+   Narrow Tablet Styles: 0 to 630px 
+   ================================
+*/
+@media only screen and (max-width: 630px) {    
+    nav ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;
+
+        -webkit-flex-flow: row wrap;
+        -moz-flex-flow: row wrap;
+        flex-flow: row wrap;
+    }
+
+    nav li {    
+        -webkit-flex: 1 1 auto;
+        -moz-flex: 1 1 auto;
+        flex: 1 1 auto;
+    }    
+    
+    nav > ul.mainmenu li#last:last-of-type {
+        border-top: 1px solid antiquewhite;
+    }
+}
+
+/* ===============================
+   Tablet/Desktop Styles: from 631 
+   ===============================
+*/
+@media only screen and (min-width: 631px) {
+        nav ul {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: flex;
+
+        -webkit-flex-flow: row nowrap;
+        -moz-flex-flow: row nowrap;
+        flex-flow: row nowrap;
+    }
+
+    nav li {    
+        -webkit-flex: 1 1 auto;
+        -moz-flex: 1 1 auto;
+        flex: 1 1 auto;
+
+        align-items: baseline;
+        justify-content: space-around;
+    }    
+    
+    nav > ul.mainmenu li#last:last-of-type {
+        border-top: none;
+    }
+}

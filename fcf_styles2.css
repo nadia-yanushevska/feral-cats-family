@@ -1,0 +1,103 @@
+@charset "utf-8";
+
+/*   
+    Feral Cats Family - Styles for Current Fosters Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_styles2.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* Article Styles */
+article > img {
+    border-radius: 30px;
+    padding-left: 15px;
+}
+
+article {
+    background-color: rgba(255, 200, 130, 0.6);
+    background: radial-gradient(rgba(255, 200, 130, 0.6), rgba(255, 200, 130, 0.4), rgba(255, 200, 130, 0));
+}
+
+article:nth-of-type(3n-2) {
+    background-color: rgba(130, 255, 160, 0.6);
+    background: radial-gradient(rgba(130, 255, 160, 0.6), rgba(130, 255, 160, 0.4), rgba(130, 255, 160, 0));
+}
+
+article:nth-of-type(3n-1) {
+    background-color: rgba(130, 160, 255, 0.6);
+    background: radial-gradient(rgba(130, 160, 255, 0.6), rgba(130, 160, 255, 0.4), rgba(130, 160, 255, 0));
+}
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+@media only screen and (max-width: 480px) {
+    /* Article Styles */
+    article > img {
+        width: 90%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Image Styles */
+    img.vert {
+        width: 70%;
+    }
+    
+    img.hor {
+        width: 95%
+    }
+}
+
+/* ================================
+   Tablet Styles: 481px to 768px
+   ================================
+*/
+@media only screen and (min-width: 481px) {
+    /* Article Styles */
+    article > img {
+        width: 70%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    /* Image Styles */
+    img.vert {
+        width: 55%;
+    }
+    
+    img.hor {
+        width: 85%
+    }
+}
+
+/* ================================
+   Desktop Styles: 769px and greater
+   ================================
+*/
+@media only screen and (min-width: 769px) { 
+    /* Article Styles */
+    article > img {
+        width: 35%;
+        float: right;
+    }
+    /* Image Styles */
+    img.vert {
+        width: 25%;
+    }
+
+    img.hor {
+        width: 45%;
+    }
+    /* Clefix */
+    article::after {
+        clear: both;
+        content: "";
+    }
+}

@@ -1,0 +1,151 @@
+@charset "utf-8";
+
+/*   
+    Feral Cats Family - Styles for Best Moments Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_styles3.css
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+*/
+
+/* First Article Syles */
+article#pic {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+/* Image Styles */
+
+#pic > img {
+    display: block;
+    margin: 0.3em;
+    max-width: 450px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px grey;
+    border: 1px solid rgb(230, 220, 110);
+}
+
+#pic > img.vert {
+    transform: rotate(90deg);
+    margin-bottom: 4em;
+    margin-top: 4em;
+    order: 1;
+}
+
+/* First Article Syles */
+article#pic {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+/* Second Article Syles - Video */
+#video > video {
+    margin-bottom: 1em;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px grey;
+    border: 1px solid rgb(230, 220, 110);
+}
+
+/* =========================
+   Mobile Styles: 0 to 480px 
+   =========================
+*/
+@media only screen and (max-width: 480px) {
+    /* Image Styles */
+    #pic > img {
+        width: 100%;
+    }
+
+    #pic > img.vert {
+        width: 100%;
+    }
+    
+    /* Video Styles */
+    #video > video { 
+        display: block;
+        margin-left: auto;
+        margin-right: auto;       
+        width: 80%;
+    }
+
+    #video > video.vert {
+        width: 60%;
+    }
+}
+
+/* ================================
+   Tablet Styles: 481px to 768px
+   ================================
+*/
+@media only screen and (min-width: 481px) {   
+    /* Image Styles */
+    #pic > img {
+        width: 47%;
+    }
+
+    #pic > img.vert {
+        width: 31%;
+    }
+    
+    /* Video Styles */
+    #video > video {
+        width: 90%;
+    }
+
+    #video > video.vert {
+        width: 90%;
+    }
+    
+    /* Drid Styles */
+    article#video {
+        display: grid;
+        grid-template-columns: auto auto auto;
+    }
+
+    video#v1 {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+    }
+
+    video#v2 {
+        grid-column: 3;
+        grid-row: 1;
+    }
+
+    video#v3 {
+        grid-column: 2;
+        grid-row: 1 / span 2;
+    }
+
+    video#v4 {
+        grid-column: 3;
+        grid-row: 2 / span 2;
+    }
+
+    video#v5 {
+        grid-column: 1 / span 2;
+        grid-row: 3;
+    }
+}
+
+/* ================================
+   Desktop Styles: 769px and greater
+   ================================
+*/
+@media only screen and (min-width: 769px) {
+    /* Image Styles */
+    #pic > img {
+        width: 48%;
+    }
+
+    #pic > img.vert {
+        width: 32%;
+    }
+}

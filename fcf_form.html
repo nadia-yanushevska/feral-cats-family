@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!--
+    Feral Cats Family - Donation Form Page
+    Author: Nadiia Yanuchevska
+
+    Filename: fcf_form.html
+    CSS files: reset.css, fcf_styles.css.
+
+    Feral Cats Family website:
+       HTML files: fcf_about.html, fcf_adopt.html, fcf_best.html, fcf_feral.html, fcf_form.html, fcf_foster.html, fcf_help.html,                         fcf_history.html, index.html.
+       CSS files: fcf_flex.css, fcf_flex.css, fcf_styles.css, fcf_styles1.css, fcf_styles2.css, fcf_styles3.css, fcf_styles4.css,                        fcf_styles5.css, fcf_styles6.css, fcf_styles7.css, fcf_styles8.css, reset.css.
+       JS files: fcf_best_img.html, fcf_script.
+-->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <title>Donation Form</title>
+    
+    <link href="reset.css" rel="stylesheet" media="all"/>
+    <link href="fcf_styles.css" rel="stylesheet" media="all"/>
+    
+    <script src="fcf_script.js" async></script>
+    
+    <style>
+        form {
+            margin: auto;
+            margin-top: 4em;
+            width: 500px;
+        }
+        
+        legend {
+            font: small-caps 2em/2.3em serif; 
+            text-shadow: 2px 2px 6px rgb(100, 132, 9);
+        }
+        
+        fieldset {
+            background-color: hsla(100, 70%, 90%, 0.7);   
+            border: 4px double rgb(100, 132, 9);
+        }
+        
+        p {
+            margin: 1em;
+        }
+        
+        select:focus, input:focus {
+            background-color: rgba(250, 250, 230, 0.5);
+        }
+        
+        #textInput {
+            width: 35px;
+        }
+        
+        p#submit {
+            text-align: right;
+        }
+        
+        p:last-of-type {
+            text-align: center;
+        }
+        
+        div#time {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+   <header>
+      <h1><a href="index.html">Feral Cats Family</a></h1>
+    </header>
+        
+    <form method="post" id="form">
+      <fieldset>
+          <legend>Donation Form</legend>
+          <p>
+              <label for="name">Name (optional)</label>
+              <br>
+              <input id="name" name="Name" type="text" placeholder="Anonym"/>
+          </p>
+          <p>
+              <label for=”rangeMoney”>How much would you like to donate?</label>
+              <br>
+              <input type="range" name="rangeMoney" id="rangeMoney" value="0" min="5" max="200" step="5" onchange="updateTextMoney(this.value);"/>
+              <input type="text" id="textMoney" value="" required>
+          </p>
+          <p>
+              <select name="options" id="options" data-highlight="false" required>
+                  <option value="">Donate Options</option>
+                  <option value="fb_fund">Fundraiser in Facebook</option>
+                  <option value="go_fund">GoFundMe</option>
+                  <option value="etrans">Etransfer via e-mail(interac etransfers only!)</option>
+              </select>
+          </p>
+          <p id="submit">
+             <input type="submit" value="Donate" onclick="redirect();"/> 
+          </p>          
+      </fieldset>
+   </form>
+    
+    <p>Current time:</p><div id="time"></div>
+    <script>
+        function checkTime(i) {
+            if (i < 10) {
+                i = "0" + i;
+            }
+            return i;
+        }
+
+        function startTime() {
+            var today = new Date();
+            var y = today.getFullYear();
+            var mon = today.getMonth();
+            var d = today.getDate();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+            mon = mon+1;
+            document.getElementById('time').innerHTML = h + ":" + m + ":" + s + "<br>" + d + "/" + mon + "/" + y;
+            t = setTimeout(function() { startTime() }, 500);
+        }
+        
+        startTime();
+    </script>
+</body>
+</html>
