@@ -19,8 +19,8 @@ nav > ul li#last {
 
 /* Main Styles */
 html {
-    background: rgb(110, 142, 19) url(forest.webp) center center fixed;
-    background-size: auto 890px;
+    background: rgb(110, 142, 19) url(forest.webp) no-repeat fixed center;
+    background-size: cover;
     height: 100%;
     font-family: "Times New Roman", Times, serif;
 }
